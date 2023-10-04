@@ -47,11 +47,38 @@
     }   
         
         out.innerHTML="good count "+good+" oops count "+oops
-       
+        out.style.color= "#ff0000"
     }
 
-   
 </script>  
+<hr>
+<h5>Images of cities</h5>
+<div class="container" >
+    <img src="Newyork.jpg" alt="Newyork image" width=100px height=100px onclick="selectImage()" id="Newyork_city">
 
+
+<script>
+    let useImage = 1;
+    function selectImage(){
+        switch(useImage){
+            case 1:
+             document.getElementById("Newyork_city").src="Newyork.jpg";
+             useImage+=1;
+             break;
+             case 2:
+             document.getElementById("Newyork_city").src= "Edinburgh.jpg";
+             useImage+=1;
+             break;
+             case 3:
+             document.getElementById("Newyork_city").src="London.jpg";
+             useImage=1;
+             break;
+             default:
+             document.getElementById("Newyork_city").src="Newyork.jpg";
+
+        }
+    }
+</script>
+</div>
 </body>
 </html> 
