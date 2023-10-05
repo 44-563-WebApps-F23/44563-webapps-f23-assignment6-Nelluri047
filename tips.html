@@ -43,6 +43,45 @@ function tips(){
    
 }
 </script>
+<hr>
+<h2 class="display-4">Getting input with radio buttons</h2>
+
+    <form>
+        <input type="radio" id="sum" name="Arithmetic" value="sum" onclick="chooseOp()">
+        <label for="sum">sum</label></br>
+      
+        <input type="radio" id="diff" name="Arithmetic" value="difference" onclick="chooseOp()">
+        <label for="diff">diff</label></br>
+      
+        <input type="radio" id="mult" name="Arithmetic" value="product" onclick="chooseOp()">
+        <label for="mult">mult</label></br>
+
+        <!--<input type="button" onclick="resolveRadio()" value="Get values from radio group">-->
+
+      </form>
+      <br>
+      <p id="arithmeticop">Arithmetic operations result shown here</p>
+      <script>
+        function chooseOp(){
+            console.log("Getting form values")
+    amount = parseFloat(document.getElementById("form1_amount").value)
+    tip = parseFloat(document.getElementById("form1_conv").value)
+    answer = document.getElementById("arithmeticop")
+        if(document.getElementById("sum").checked){
+          answer.innerHTML="Sum of "+ amount + "and" + tip + " is "+ (amount+tip)
+        }
+        else if(document.getElementById("diff").checked){
+          answer.innerHTML="diff of "+amount+" and"+tip+" is "+ (amount-tip)
+        }
+      
+        else if(document.getElementById("mult").checked){
+            answer.innerHTML="product of "+amount+" and"+tip+" is "+ (amount*tip)
+        }
+        answer.style.color="#ff0000"
+
+        }
+      </script>
+
 
 </body>
 </html> 
